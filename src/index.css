@@ -46,3 +46,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.zero {
+  width: 200px;
+}
+
+.op-btn {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  border: 1px solid #aaa;
+  background-color: #fd8d0e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

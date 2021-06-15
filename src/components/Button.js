@@ -2,11 +2,19 @@
 import React from 'react'
 
 export default function Button(props) {
-  console.log(props)
-  const {value} = props
-  return (
-    <div className = 'btn'>
-      {value}
-    </div>
-  )
+  const {value, isOperator, isZero} = props
+  console.log(isZero)
+  if (isOperator){
+    return (
+      <div className = 'op-btn'>
+        {value}
+      </div>
+    );
+  } else {
+    return (
+      <div className ={isZero ? 'btn zero' : 'btn'}>
+        {value}
+      </div>
+    )
+  }
 }
