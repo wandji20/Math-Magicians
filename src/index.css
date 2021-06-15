@@ -1,3 +1,4 @@
-body {
-  color: black;
+#root {
+  display: flex;
+  justify-content: center;
 }
