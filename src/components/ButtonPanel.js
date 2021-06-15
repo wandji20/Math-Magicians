@@ -4,20 +4,31 @@ import React from 'react';
 import Button from './Button';
 
 export default class ButtonPanel extends React.Component {
-  renderInput = (value) => {
+  renderInput = (buttonName) => {
     const { handleClick } = this.props;
     const operators = ['-', '+', '÷', 'x'];
-    if (operators.includes(value) || value === '=') {
+    if (operators.includes(buttonName) || buttonName === '=') {
       return (
-        <Button handleClick={() => { handleClick(value); }} value={value} isOperator />
+        <Button
+          handleClick={() => { handleClick(buttonName); }}
+          buttonName={buttonName}
+          isOperator
+        />
       );
-    } if (value === '0') {
+    } if (buttonName === '0') {
       return (
-        <Button handleClick={() => { handleClick(value); }} value={value} isZero />
+        <Button
+          handleClick={() => { handleClick(buttonName); }}
+          buttonName={buttonName}
+          isZero
+        />
       );
     }
     return (
-      <Button handleClick={() => { handleClick(value); }} value={value} />
+      <Button
+        handleClick={() => { handleClick(buttonName); }}
+        buttonName={buttonName}
+      />
     );
   }
 

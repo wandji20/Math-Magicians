@@ -1,10 +1,11 @@
+/* eslint-disable */
 import React from 'react';
 
-export default function Display() {
-  const input = '0';
+export default function Display(props) {
+  const { result } = props;
   return (
     <div className="display">
-      {input}
+      {result}
     </div>
   );
 }
