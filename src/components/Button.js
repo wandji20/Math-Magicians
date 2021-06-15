@@ -2,28 +2,28 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Button(props) {
-  const { value, isOperator, isZero } = props;
+  const { buttonName, isOperator, isZero } = props;
   if (isOperator) {
     return (
       <div className="op-btn">
-        {value}
+        {buttonName}
       </div>
     );
   }
   return (
     <div className={isZero ? 'btn zero' : 'btn'}>
-      {value}
+      {buttonName}
     </div>
   );
 }
 
 Button.propTypes = {
-  value: PropTypes.string,
+  buttonName: PropTypes.string,
   isZero: PropTypes.bool,
   isOperator: PropTypes.bool,
 };
 Button.defaultProps = {
-  value: '',
+  buttonName: '',
   isZero: false,
   isOperator: false,
 };

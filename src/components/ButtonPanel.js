@@ -1,40 +1,38 @@
-/* eslint-disable */
-import React from 'react'
-import Button from './Button'
+import React from 'react';
+import Button from './Button';
 
 export default function ButtonPanel() {
   return (
-    <div className = 'button-panel'>
+    <div className="button-panel">
       <div className="row">
-        <Button value = {'AC'} />
-        <Button value = {'+/-'} />
-        <Button value = {'%'} />
-        <Button isOperator = {true} value = {'÷'} />
+        <Button buttonName="AC" />
+        <Button buttonName="+/-" />
+        <Button buttonName="%" />
+        <Button isOperator buttonName="÷" />
       </div>
       <div className="row">
-        <Button value = {'7'} />
-        <Button value = {'8'} />
-        <Button value = {'9'} />
-        <Button isOperator = {true} value = {'X'} />
+        <Button buttonName="7" />
+        <Button buttonName="8" />
+        <Button buttonName="9" />
+        <Button isOperator buttonName="X" />
       </div>
       <div className="row">
-        <Button value = {'4'} />
-        <Button value = {'5'} />
-        <Button value = {'6'} />
-        <Button isOperator = {true} value = {'-'} />
+        <Button buttonName="4" />
+        <Button buttonName="5" />
+        <Button buttonName="6" />
+        <Button isOperator buttonName="-" />
       </div>
       <div className="row">
-        <Button value = {'1'} />
-        <Button value = {'2'} />
-        <Button value = {'3'} />
-        <Button isOperator = {true} value = {'+'} />
+        <Button buttonName="1" />
+        <Button buttonName="2" />
+        <Button buttonName="3" />
+        <Button isOperator buttonName="+" />
       </div>
       <div className="row">
-        <Button isZero = {true} isOperator = {false} value = {'0'} />
-        <Button value = {'.'} />
-        <Button isOperator = {true} value = {'='} />
+        <Button isZero isOperator={false} buttonName="0" />
+        <Button buttonName="." />
+        <Button isOperator buttonName="=" />
       </div>
     </div>
-  )
+  );
 }
-
