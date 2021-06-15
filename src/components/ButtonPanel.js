@@ -1,40 +1,66 @@
-/* eslint-disable */
-import React from 'react'
-import Button from './Button'
+// /* eslint-disable */
+import PropTypes from 'prop-types';
+import React from 'react';
+import Button from './Button';
 
-export default function ButtonPanel() {
-  return (
-    <div className = 'button-panel'>
-      <div className="row">
-        <Button value = {'AC'} />
-        <Button value = {'+/-'} />
-        <Button value = {'%'} />
-        <Button isOperator = {true} value = {'÷'} />
+export default class ButtonPanel extends React.Component {
+  renderInput = (value) => {
+    const { handleClick } = this.props;
+    const operators = ['-', '+', '÷', 'x'];
+    if (operators.includes(value) || value === '=') {
+      return (
+        <Button handleClick={() => { handleClick(value); }} value={value} isOperator />
+      );
+    } if (value === '0') {
+      return (
+        <Button handleClick={() => { handleClick(value); }} value={value} isZero />
+      );
+    }
+    return (
+      <Button handleClick={() => { handleClick(value); }} value={value} />
+    );
+  }
+
+  render() {
+    return (
+      <div className="button-panel">
+        <div className="row">
+          {this.renderInput('AC')}
+          {this.renderInput('+/-')}
+          {this.renderInput('%')}
+          {this.renderInput('÷')}
+        </div>
+        <div className="row">
+          {this.renderInput('7')}
+          {this.renderInput('8')}
+          {this.renderInput('9')}
+          {this.renderInput('x')}
+        </div>
+        <div className="row">
+          {this.renderInput('4')}
+          {this.renderInput('5')}
+          {this.renderInput('6')}
+          {this.renderInput('-')}
+        </div>
+        <div className="row">
+          {this.renderInput('1')}
+          {this.renderInput('2')}
+          {this.renderInput('3')}
+          {this.renderInput('+')}
+        </div>
+        <div className="row">
+          {this.renderInput('0')}
+          {this.renderInput('.')}
+          {this.renderInput('=')}
+        </div>
       </div>
-      <div className="row">
-        <Button value = {'7'} />
-        <Button value = {'8'} />
-        <Button value = {'9'} />
-        <Button isOperator = {true} value = {'X'} />
-      </div>
-      <div className="row">
-        <Button value = {'4'} />
-        <Button value = {'5'} />
-        <Button value = {'6'} />
-        <Button isOperator = {true} value = {'-'} />
-      </div>
-      <div className="row">
-        <Button value = {'1'} />
-        <Button value = {'2'} />
-        <Button value = {'3'} />
-        <Button isOperator = {true} value = {'+'} />
-      </div>
-      <div className="row">
-        <Button isZero = {true} isOperator = {false} value = {'0'} />
-        <Button value = {'.'} />
-        <Button isOperator = {true} value = {'='} />
-      </div>
-    </div>
-  )
+    );
+  }
 }
 
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func,
+};
+ButtonPanel.defaultProps = {
+  handleClick: () => {},
+};
