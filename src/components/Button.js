@@ -22,6 +22,7 @@ Button.propTypes = {
   isZero: PropTypes.bool,
   isOperator: PropTypes.bool,
 };
+
 Button.defaultProps = {
   buttonName: '',
   isZero: false,
