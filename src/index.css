@@ -1,13 +1,14 @@
 body {
   width: 100%;
   padding: 0;
-  height: 100vh;
-  font-size: 60px;
+  height: 90vh;
+  font-size: 40px;
+  margin: 0;
 }
 
 #root {
   margin: 50px auto;
-  width: 400px;
+  width: 320px;
   height: max-content;
 }
 
@@ -18,7 +19,7 @@ body {
 
 .display {
   width: 100%;
-  height: 120px;
+  height: 100px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -37,8 +38,8 @@ body {
 }
 
 .btn {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: auto;
   text-align: center;
   border: 1px solid #aaa;
@@ -46,15 +47,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
 }
 
 .zero {
-  width: 200px;
+  width: 160px;
 }
 
 .op-btn {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: auto;
   text-align: center;
   border: 1px solid #aaa;
@@ -62,4 +64,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 40px;
 }

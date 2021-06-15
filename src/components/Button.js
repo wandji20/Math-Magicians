@@ -1,4 +1,4 @@
-/* eslint-disable */
+// /* eslint-disable */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,18 +8,23 @@ export default function Button(props) {
   } = props;
   if (isOperator) {
     return (
-      <div className="op-btn"  onClick={handleClick}>
+      <button
+        type="button"
+        className="op-btn"
+        onClick={handleClick}
+      >
         {buttonName}
-      </div>
+      </button>
     );
   }
   return (
-    <div
+    <button
+      type="button"
       className={isZero ? 'btn zero' : 'btn'}
       onClick={handleClick}
     >
       {buttonName}
-    </div>
+    </button>
   );
 }
 

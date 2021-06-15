@@ -1,5 +1,6 @@
-/* eslint-disable */
+// /* eslint-disable */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Display(props) {
   const { result } = props;
@@ -9,3 +10,11 @@ export default function Display(props) {
     </div>
   );
 }
+
+Display.propTypes = {
+  result: PropTypes.string,
+};
+
+Display.defaultProps = {
+  result: '',
+};
