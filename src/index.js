@@ -1,16 +1,9 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import './index.css';
-
-function Test() {
-  return (
-    <div>
-      Yooooo
-    </div>
-  );
-}
+import App from './components/App';
 
 ReactDOM.render(
-  <Test />,
+  <App />,
   document.getElementById('root'),
 );
