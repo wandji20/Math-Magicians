@@ -1,4 +1,3 @@
-// /* eslint-disable */
 import PropTypes from 'prop-types';
 import React from 'react';
 import Button from './Button';
