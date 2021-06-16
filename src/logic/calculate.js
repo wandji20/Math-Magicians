@@ -1,4 +1,3 @@
-// /* eslint-disable */
 import Big from 'big.js';
 import operate from './operate';
 
