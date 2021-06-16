@@ -1,38 +1,76 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import Button from './Button';
 
-export default function ButtonPanel() {
-  return (
-    <div className="button-panel">
-      <div className="row">
-        <Button buttonName="AC" />
-        <Button buttonName="+/-" />
-        <Button buttonName="%" />
-        <Button isOperator buttonName="÷" />
+export default class ButtonPanel extends React.Component {
+  renderInput = (buttonName) => {
+    const { handleClick } = this.props;
+    const operators = ['-', '+', '÷', 'x'];
+    if (operators.includes(buttonName) || buttonName === '=') {
+      return (
+        <Button
+          handleClick={() => { handleClick(buttonName); }}
+          buttonName={buttonName}
+          isOperator
+        />
+      );
+    } if (buttonName === '0') {
+      return (
+        <Button
+          handleClick={() => { handleClick(buttonName); }}
+          buttonName={buttonName}
+          isZero
+        />
+      );
+    }
+    return (
+      <Button
+        handleClick={() => { handleClick(buttonName); }}
+        buttonName={buttonName}
+      />
+    );
+  }
+
+  render() {
+    return (
+      <div className="button-panel">
+        <div className="row">
+          {this.renderInput('AC')}
+          {this.renderInput('+/-')}
+          {this.renderInput('%')}
+          {this.renderInput('÷')}
+        </div>
+        <div className="row">
+          {this.renderInput('7')}
+          {this.renderInput('8')}
+          {this.renderInput('9')}
+          {this.renderInput('x')}
+        </div>
+        <div className="row">
+          {this.renderInput('4')}
+          {this.renderInput('5')}
+          {this.renderInput('6')}
+          {this.renderInput('-')}
+        </div>
+        <div className="row">
+          {this.renderInput('1')}
+          {this.renderInput('2')}
+          {this.renderInput('3')}
+          {this.renderInput('+')}
+        </div>
+        <div className="row">
+          {this.renderInput('0')}
+          {this.renderInput('.')}
+          {this.renderInput('=')}
+        </div>
       </div>
-      <div className="row">
-        <Button buttonName="7" />
-        <Button buttonName="8" />
-        <Button buttonName="9" />
-        <Button isOperator buttonName="X" />
-      </div>
-      <div className="row">
-        <Button buttonName="4" />
-        <Button buttonName="5" />
-        <Button buttonName="6" />
-        <Button isOperator buttonName="-" />
-      </div>
-      <div className="row">
-        <Button buttonName="1" />
-        <Button buttonName="2" />
-        <Button buttonName="3" />
-        <Button isOperator buttonName="+" />
-      </div>
-      <div className="row">
-        <Button isZero isOperator={false} buttonName="0" />
-        <Button buttonName="." />
-        <Button isOperator buttonName="=" />
-      </div>
-    </div>
-  );
+    );
+  }
 }
+
+ButtonPanel.propTypes = {
+  handleClick: PropTypes.func,
+};
+ButtonPanel.defaultProps = {
+  handleClick: () => {},
+};
