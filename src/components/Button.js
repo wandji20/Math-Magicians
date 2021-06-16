@@ -34,6 +34,7 @@ Button.propTypes = {
   isOperator: PropTypes.bool,
   handleClick: PropTypes.func,
 };
+
 Button.defaultProps = {
   buttonName: '',
   isZero: false,
