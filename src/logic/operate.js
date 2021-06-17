@@ -1,4 +1,3 @@
-// /* eslint-disable */
 import Big from 'big.js';
 
 Big.strict = true;
@@ -21,7 +20,7 @@ const operate = (numberOne, numberTwo, operation) => {
       result = firstNumber.plus(secondNumber);
       break;
     default:
-      result = null;
+      result = '';
   }
   return result.toString();
 };
