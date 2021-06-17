@@ -7,8 +7,8 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: '0',
-      next: '0',
+      total: null,
+      next: null,
       operation: null,
     };
   }
@@ -27,10 +27,11 @@ export default class App extends React.Component {
 
   render() {
     const { total } = this.state;
+    console.log(this.state);
     return (
       <div className="container">
         <Display result={total} />
-        <ButtonPanel handleClick={(buttonName) => { this.handleClick(buttonName); }} />
+        <ButtonPanel clickHandler={(buttonName) => { this.handleClick(buttonName); }} />
       </div>
     );
   }

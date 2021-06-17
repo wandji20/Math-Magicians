@@ -4,12 +4,12 @@ import Button from './Button';
 
 export default class ButtonPanel extends React.Component {
   renderInput = (buttonName) => {
-    const { handleClick } = this.props;
+    const { clickHandler } = this.props;
     const operators = ['-', '+', '÷', 'x'];
     if (operators.includes(buttonName) || buttonName === '=') {
       return (
         <Button
-          handleClick={() => { handleClick(buttonName); }}
+          clickHandler={() => { clickHandler(buttonName); }}
           buttonName={buttonName}
           isOperator
         />
@@ -17,7 +17,7 @@ export default class ButtonPanel extends React.Component {
     } if (buttonName === '0') {
       return (
         <Button
-          handleClick={() => { handleClick(buttonName); }}
+          clickHandler={() => { clickHandler(buttonName); }}
           buttonName={buttonName}
           isZero
         />
@@ -25,7 +25,7 @@ export default class ButtonPanel extends React.Component {
     }
     return (
       <Button
-        handleClick={() => { handleClick(buttonName); }}
+        clickHandler={() => { clickHandler(buttonName); }}
         buttonName={buttonName}
       />
     );
@@ -69,8 +69,8 @@ export default class ButtonPanel extends React.Component {
 }
 
 ButtonPanel.propTypes = {
-  handleClick: PropTypes.func,
+  clickHandler: PropTypes.func,
 };
 ButtonPanel.defaultProps = {
-  handleClick: () => {},
+  clickHandler: () => {},
 };

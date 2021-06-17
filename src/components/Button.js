@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 
 export default function Button(props) {
   const {
-    buttonName, isOperator, isZero, handleClick,
+    buttonName, isOperator, isZero, clickHandler,
   } = props;
   if (isOperator) {
     return (
       <button
         type="button"
         className="op-btn"
-        onClick={handleClick}
+        onClick={clickHandler}
       >
         {buttonName}
       </button>
@@ -20,7 +20,7 @@ export default function Button(props) {
     <button
       type="button"
       className={isZero ? 'btn zero' : 'btn'}
-      onClick={handleClick}
+      onClick={clickHandler}
     >
       {buttonName}
     </button>
@@ -31,12 +31,12 @@ Button.propTypes = {
   buttonName: PropTypes.string,
   isZero: PropTypes.bool,
   isOperator: PropTypes.bool,
-  handleClick: PropTypes.func,
+  clickHandler: PropTypes.func,
 };
 
 Button.defaultProps = {
   buttonName: '',
   isZero: false,
   isOperator: false,
-  handleClick: () => {},
+  clickHandler: () => {},
 };
