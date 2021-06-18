@@ -1,12 +1,20 @@
 # React Calculator
 
-This is a basic calculator app built with react.
+This is a basic calculator app built with react using features such as
+
+- Class components
+- Function components
+- Uplifting state
 
 ## [Live](https://wandji-react-calculator.herokuapp.com/)
 
 ### Built with
 
 - React
+- Javascript
+- HTML
+- CSS
+- Big.js
 
 ### Getting started
 
