@@ -15,6 +15,14 @@ export default class App extends React.Component {
 
   handleClick = (buttonName) => {
     const dataObject = { ...this.state };
+    if (dataObject.total === 'error') {
+      this.setState(() => ({
+        total: null,
+        next: null,
+        operation: null,
+      }));
+      return;
+    }
     const { next, operation, total } = calculate(dataObject, buttonName);
     this.setState(() => (
       {
@@ -30,7 +38,7 @@ export default class App extends React.Component {
     return (
       <div className="container">
         <Display result={total} />
-        <ButtonPanel clickHandler={(buttonName) => { this.handleClick(buttonName); }} />
+        <ButtonPanel clickHandler={this.handleClick} />
       </div>
     );
   }

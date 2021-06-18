@@ -5,7 +5,7 @@ Big.strict = true;
 const operate = (numberOne, numberTwo, operation) => {
   const firstNumber = Big(numberOne);
   const secondNumber = Big(numberTwo);
-  if (numberTwo === '0') return 'error';
+  if (secondNumber.toString() === '0') return 'error';
   let value;
   switch (operation) {
     case 'x':

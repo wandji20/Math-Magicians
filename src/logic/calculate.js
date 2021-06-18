@@ -25,15 +25,15 @@ const calculate = (dataObject, buttonName) => {
       newDataObject.total = total.concat('.');
     }
   }
-  if (buttonName === '+/-' && total) {
+  if (buttonName === '+/-' && total && parseFloat(total)) {
     const newTotal = Big(total);
     newDataObject.total = newTotal.times(-1).toString();
   }
-  if (buttonName === '%' && total) {
+  if (buttonName === '%' && total && parseFloat(total)) {
     const newTotal = Big(total);
     newDataObject.total = newTotal.div(100).toString();
   }
-  if (buttonName === '=' && operation && total) {
+  if (buttonName === '=' && operation && total && next) {
     const newTotal = operate(next, total, operation);
     newDataObject.operation = null;
     newDataObject.total = newTotal.toString();
