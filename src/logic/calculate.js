@@ -15,7 +15,7 @@ const calculate = (dataObject, buttonName) => {
     newDataObject.operation = null;
   }
   if (numbers.includes(buttonName)) {
-    newDataObject.total = `${total === null ? buttonName : total + buttonName}`;
+    newDataObject.total = `${(total === null || total === 'error') ? buttonName : total + buttonName}`;
   }
 
   if (buttonName === '.') {

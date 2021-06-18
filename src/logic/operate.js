@@ -5,23 +5,26 @@ Big.strict = true;
 const operate = (numberOne, numberTwo, operation) => {
   const firstNumber = Big(numberOne);
   const secondNumber = Big(numberTwo);
-  let result;
+  if (numberTwo === '0') return 'error';
+  let value;
   switch (operation) {
     case 'x':
-      result = firstNumber.times(secondNumber);
+      value = firstNumber.times(secondNumber);
       break;
     case '-':
-      result = firstNumber.minus(secondNumber);
+      value = firstNumber.minus(secondNumber);
       break;
     case '÷':
-      result = firstNumber.div(secondNumber);
+      value = firstNumber.div(secondNumber);
       break;
     case '+':
-      result = firstNumber.plus(secondNumber);
+      value = firstNumber.plus(secondNumber);
       break;
     default:
-      result = '';
+      value = '';
   }
-  return result.toString();
+  const result = (value.toString().length < 22) ? value : value.toExponential(17);
+
+  return result;
 };
 export default operate;
