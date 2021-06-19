@@ -10,29 +10,30 @@ const calculate = (dataObject, buttonName) => {
   const operators = ['-', '+', '÷', 'x'];
   const newDataObject = { ...dataObject };
   if (buttonName === 'AC') {
-    newDataObject.total = '0';
-    newDataObject.next = '0';
+    newDataObject.total = null;
+    newDataObject.next = null;
     newDataObject.operation = null;
   }
   if (numbers.includes(buttonName)) {
-    newDataObject.total = `${total === '0' ? buttonName : total + buttonName}`;
+    newDataObject.total = `${(total === null || total === 'error') ? buttonName : total + buttonName}`;
   }
-  if (buttonName === '.' && total.indexOf(buttonName) === -1) {
-    newDataObject.total = total.concat('.');
+
+  if (buttonName === '.') {
+    if (total === null) {
+      newDataObject.total = '0'.concat('.');
+    } else if (total && total.indexOf(buttonName) === -1) {
+      newDataObject.total = total.concat('.');
+    }
   }
-  if (buttonName === '+/-') {
-    const newNext = Big(next);
+  if (buttonName === '+/-' && total && parseFloat(total)) {
     const newTotal = Big(total);
     newDataObject.total = newTotal.times(-1).toString();
-    newDataObject.next = newNext.times(-1).toString();
   }
-  if (buttonName === '%') {
-    const newNext = Big(next);
+  if (buttonName === '%' && total && parseFloat(total)) {
     const newTotal = Big(total);
     newDataObject.total = newTotal.div(100).toString();
-    newDataObject.next = newNext.div(100).toString();
   }
-  if (buttonName === '=' && operation) {
+  if (buttonName === '=' && operation && total && next) {
     const newTotal = operate(next, total, operation);
     newDataObject.operation = null;
     newDataObject.total = newTotal.toString();
@@ -44,7 +45,7 @@ const calculate = (dataObject, buttonName) => {
     } else {
       newDataObject.operation = buttonName;
       newDataObject.next = total;
-      newDataObject.total = '0';
+      newDataObject.total = null;
     }
   }
 
