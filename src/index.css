@@ -5,7 +5,6 @@ body {
   font-family: "Rubik", sans-serif;
   padding: 0;
   margin: 0;
-  border: 1px solid;
 }
 
 #root {
@@ -16,25 +15,27 @@ body {
 }
 
 .container {
-  /* margin: 30px auto; */
   border: 1px solid;
   width: 700px;
 }
+
 header {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 nav {
-  width: 100%;
+  width: 90%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
 ul {
   width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   list-style-type: none;
 }
@@ -43,6 +44,7 @@ li {
   padding-right: 5px;
   margin-right: 5px;
 }
+
 .border {
   border-right: 3px solid black;
 }
@@ -80,28 +82,10 @@ li {
 }
 
 .btn {
-  /* width: 25%; */
   height: 100px;
   margin: auto;
   text-align: center;
   background-color: #ddd;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 40px;
-  border: solid #aaa;
-}
-
-/* .zero {
-  width: 50%;
-} */
-
-.op-btn {
-  width: 25%;
-  height: 100px;
-  margin: auto;
-  text-align: center;
-  background-color: #fd8d0e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,6 +114,7 @@ li {
 .nav-link {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+  color: #000;
   font-size: 20px;
   transition: 0.75s;
 }
@@ -138,5 +123,22 @@ li {
   font-size: 30px;
 }
 
-@media only screen and (min-width: 992px) {
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #1d1c1f;
+  border-radius: 100%;
+  margin: auto;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
