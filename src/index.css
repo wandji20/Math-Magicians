@@ -1,21 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 body {
-  width: 100%;
+  font-family: "Rubik", sans-serif;
   padding: 0;
-  height: 90vh;
-  font-size: 40px;
   margin: 0;
 }
 
 #root {
-  width: max-content;
-  margin: auto;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 .container {
-  margin: 50px auto;
-  height: max-content;
   border: 1px solid;
-  width: 320px;
+  width: 700px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+}
+
+li {
+  padding-right: 5px;
+  margin-right: 5px;
+}
+
+.border {
+  border-right: 3px solid black;
 }
 
 .display {
@@ -24,13 +55,16 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #eee;
+  background-color: #777;
+  color: white;
   margin: auto;
 }
 
 #text {
+  font-family: "Lato", sans-serif;
   font-size: 40px;
   overflow-x: hidden;
+  padding: 5px;
 }
 
 .button-panel {
@@ -41,36 +75,70 @@ body {
 }
 
 .row {
+  width: 100%;
   display: flex;
   justify-content: center;
+  height: 100px;
 }
 
 .btn {
-  width: 80px;
-  height: 80px;
+  height: 100px;
   margin: auto;
   text-align: center;
-  border: 1px solid #aaa;
   background-color: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  border: solid #aaa;
 }
 
-.zero {
-  width: 160px;
-}
-
-.op-btn {
-  width: 80px;
-  height: 80px;
-  margin: auto;
-  text-align: center;
-  border: 1px solid #aaa;
-  background-color: #fd8d0e;
+.quote {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  font-size: 40px;
+  width: 90%;
+  margin: 100px auto;
+}
+
+.quote-img {
+  width: 350px;
+  height: auto;
+}
+
+.quote-text {
+  text-align: center;
+}
+
+.nav-link {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  transition: 0.75s;
+}
+
+.nav-link:hover {
+  font-size: 30px;
+}
+
+#loading {
+  width: 2rem;
+  height: 2rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid #1d1c1f;
+  border-radius: 100%;
+  margin: auto;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

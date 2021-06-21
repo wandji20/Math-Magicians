@@ -23,7 +23,7 @@ const operate = (numberOne, numberTwo, operation) => {
     default:
       value = '';
   }
-  const result = (value.toString().length < 22) ? value : value.toExponential(17);
+  const result = (value.toString().length < 38) ? value : value.toExponential(30);
 
   return result;
 };
