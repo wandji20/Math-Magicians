@@ -5,21 +5,21 @@ export default function Button(props) {
   const {
     buttonName, isOperator, isZero, clickHandler,
   } = props;
-  if (isOperator) {
-    return (
-      <button
-        type="button"
-        className="op-btn"
-        onClick={clickHandler}
-      >
-        {buttonName}
-      </button>
-    );
-  }
+  // if (isOperator) {
+  //   return (
+  //     <button
+  //       type="button"
+  //       className="op-btn"
+  //       onClick={clickHandler}
+  //     >
+  //       {buttonName}
+  //     </button>
+  //   );
+  // }
   return (
     <button
       type="button"
-      className={isZero ? 'btn zero' : 'btn'}
+      className={isOperator ? 'op-btn' : isZero ? 'btn zero' : 'btn'}
       onClick={clickHandler}
     >
       {buttonName}
