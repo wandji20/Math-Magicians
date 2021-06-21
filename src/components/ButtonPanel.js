@@ -12,7 +12,7 @@ const ButtonPanel = (props) => {
         <Button
           clickHandler={() => { clickHandler(buttonName); }}
           buttonName={buttonName}
-          isOperator
+          color="#fd8d0e"
         />
       );
     } if (buttonName === '0') {
@@ -20,7 +20,7 @@ const ButtonPanel = (props) => {
         <Button
           clickHandler={() => { clickHandler(buttonName); }}
           buttonName={buttonName}
-          isZero
+          wide="50%"
         />
       );
     }

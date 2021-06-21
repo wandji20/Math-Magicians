@@ -20,10 +20,9 @@ const Quote = () => {
   })
 
   return (
-    <div style = {
-      {display: 'flex', width: '90%', justifyContent: 'space-between', margin: '40px auto', alignItems: 'center'}}>
-      <img style ={{width : '500px', height: 'auto'}} src={url} alt="" />
-      <h2>{quote}</h2>
+    <div className = 'quote'>
+      <img className = 'quote-img' src={url} alt="" />
+      <h2 className = 'quote-text'>{quote}</h2>
      
     </div>
   )

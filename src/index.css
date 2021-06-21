@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
 body {
-  /* width: 360px; */
+  font-family: "Rubik", sans-serif;
   padding: 0;
   margin: 0;
   border: 1px solid;
@@ -15,7 +18,7 @@ body {
 .container {
   /* margin: 30px auto; */
   border: 1px solid;
-  width: 320px;
+  width: 700px;
 }
 header {
   width: 100%;
@@ -31,13 +34,14 @@ nav {
 ul {
   width: 60%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style-type: none;
 }
 
 li {
   padding-right: 5px;
+  margin-right: 5px;
 }
 .border {
   border-right: 3px solid black;
@@ -49,13 +53,16 @@ li {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: #eee;
+  background-color: #777;
+  color: white;
   margin: auto;
 }
 
 #text {
+  font-family: "Lato", sans-serif;
   font-size: 40px;
   overflow-x: hidden;
+  padding: 5px;
 }
 
 .button-panel {
@@ -66,36 +73,70 @@ li {
 }
 
 .row {
+  width: 100%;
   display: flex;
   justify-content: center;
+  height: 100px;
 }
 
 .btn {
-  width: 80px;
-  height: 80px;
+  /* width: 25%; */
+  height: 100px;
   margin: auto;
   text-align: center;
-  border: 1px solid #aaa;
   background-color: #ddd;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  border: solid #aaa;
 }
 
-.zero {
-  width: 160px;
-}
+/* .zero {
+  width: 50%;
+} */
 
 .op-btn {
-  width: 80px;
-  height: 80px;
+  width: 25%;
+  height: 100px;
   margin: auto;
   text-align: center;
-  border: 1px solid #aaa;
   background-color: #fd8d0e;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 40px;
+  border: solid #aaa;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: 100px auto;
+}
+
+.quote-img {
+  width: 350px;
+  height: auto;
+}
+
+.quote-text {
+  text-align: center;
+}
+
+.nav-link {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.75s;
+}
+
+.nav-link:hover {
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 992px) {
 }

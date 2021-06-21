@@ -11,7 +11,7 @@ const Display = (props) => {
     const overflowWidth = width - 320;
     if (result) {
       const resultLength = result.length;
-      if (overflowWidth > 0 && resultLength > 16) {
+      if (overflowWidth > 0 && resultLength > 28) {
         node.style.fontSize = '30px';
       }
     }
