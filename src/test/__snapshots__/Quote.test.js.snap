@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component matches snapshot 1`] = `
+<div
+  className="quote"
+>
+  <div>
+    <p
+      className="awaiting-fetch"
+      id=""
+    >
+      Fetching...
+    </p>
+    <p
+      id="loading"
+    />
+  </div>
+  <img
+    alt=""
+    className="quote-img"
+    src=""
+  />
+  <h2
+    className="quote-text"
+  >
+    
+  </h2>
+</div>
+`;
