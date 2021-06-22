@@ -1,0 +1,301 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component matches snapshot 1`] = `
+<div
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "justifyContent": "space-between",
+      "margin": "auto",
+      "width": "90%",
+    }
+  }
+>
+  <h2>
+    Let’s do some math!
+  </h2>
+  <div
+    className="container"
+  >
+    <div
+      className="display"
+    >
+      <span
+        id="text"
+      />
+    </div>
+    <div
+      className="button-panel"
+    >
+      <div
+        className="row"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          AC
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          +/-
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          %
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fd8d0e",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          ÷
+        </button>
+      </div>
+      <div
+        className="row"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          7
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          8
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          9
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fd8d0e",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          x
+        </button>
+      </div>
+      <div
+        className="row"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          4
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          5
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          6
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fd8d0e",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          -
+        </button>
+      </div>
+      <div
+        className="row"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          1
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          2
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          3
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fd8d0e",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          +
+        </button>
+      </div>
+      <div
+        className="row"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "50%",
+            }
+          }
+          type="button"
+        >
+          0
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#ddd",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          .
+        </button>
+        <button
+          className="btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "backgroundColor": "#fd8d0e",
+              "width": "25%",
+            }
+          }
+          type="button"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
