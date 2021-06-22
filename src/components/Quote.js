@@ -5,6 +5,7 @@ const Quote = () => {
   const [url, setUrl] = useState('');
   const awaitingFetch = useRef(null);
   useEffect(() => {
+    document.title = 'Quote';
     const getQuote = async () => {
       const data = await fetch('https://quotes.rest/qod?language=en');
       const response = await data.json();
