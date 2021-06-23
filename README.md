@@ -2,9 +2,10 @@
 
 This is a basic calculator app built with react using features such as
 
-- Class components
 - Function components
-- Uplifting state
+- Components lifecycle methods
+- State and props
+- Lifting state
 
 ## [Live](https://wandji-react-calculator.herokuapp.com/)
 
@@ -35,6 +36,12 @@ Run
 ```
 npm install
 npm start
+```
+
+### Run tests
+
+```
+npm test
 ```
 
 ## Author
